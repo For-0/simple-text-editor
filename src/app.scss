@@ -1,0 +1,38 @@
+@charset "utf-8";
+/*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
+
+$primary: #009688;
+$footer-background-color: $primary;
+$footer-color: #fff;
+$footer-padding: 1rem;
+$family-primary: "Raleway";
+
+// Note: Colors are the four browns in the VUS Logo. Goes from lightest to darkest.
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/base/_all.sass";
+@import "bulma/sass/elements/box.sass";
+@import "bulma/sass/elements/button.sass";
+@import "bulma/sass/elements/content.sass";
+@import "bulma/sass/elements/title.sass";
+@import "bulma/sass/elements/other.sass";
+@import "bulma/sass/components/navbar.sass";
+@import "bulma/sass/components/modal.sass";
+@import "bulma/sass/components/dropdown.sass";
+@import "bulma/sass/components/level.sass";
+@import "bulma/sass/components/menu.sass";
+@import "bulma/sass/grid/_all.sass";
+@import "bulma/sass/helpers/_all.sass";
+@import "bulma/sass/form/_all.sass";
+@import "bulma/sass/layout/_all.sass";
+
+.material-symbols-rounded {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+}
+.button .material-symbols-rounded {
+    vertical-align: sub;
+    font-size: 1rem;
+}

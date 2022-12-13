@@ -1,0 +1,30 @@
+{
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.8.1",
+    "@parcel/transformer-sass": "^2.8.1",
+    "@parcel/transformer-webmanifest": "^2.8.1",
+    "parcel": "^2.8.1"
+  },
+  "dependencies": {
+    "bulma": "^0.9.4"
+  },
+  "name": "simple-text-editor",
+  "description": "That's all it is",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build --no-source-maps",
+    "start": "parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/For-0/simple-text-editor.git"
+  },
+  "author": "grimsteel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/For-0/simple-text-editor/issues"
+  },
+  "homepage": "https://github.com/For-0/simple-text-editor#readme"
+}
