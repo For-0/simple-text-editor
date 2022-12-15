@@ -1,0 +1,13 @@
+diff --git a/node_modules/@lezer/highlight/dist/index.js b/node_modules/@lezer/highlight/dist/index.js
+index e7bfdea..4e9deb4 100644
+--- a/node_modules/@lezer/highlight/dist/index.js
++++ b/node_modules/@lezer/highlight/dist/index.js
+@@ -294,7 +294,7 @@ class HighlightBuilder {
+             highlighters = this.highlighters.filter(h => !h.scope || h.scope(type));
+         let cls = inheritedClass;
+         let rule = getStyleTags(cursor) || Rule.empty;
+-        let tagCls = highlightTags(highlighters, rule.tags);
++        let tagCls = highlightTags(highlighters, rule.tags || []);
+         if (tagCls) {
+             if (cls)
+                 cls += " ";

@@ -42,12 +42,10 @@
         <div class="navbar-item">
           <div class="buttons">
             <a class="button is-light">
-              <strong>
-                <span class="icon">
-                  <i class="material-symbols-rounded">add</i>
-                </span>
-                 Create
-              </strong>
+              <span class="icon">
+                <i class="material-symbols-rounded">add</i>
+              </span>
+              <span>Create</span>
             </a>
             <a class="button is-primary">Options</a>
           </div>
@@ -55,7 +53,14 @@
       </div>
     </div>
   </nav>
-  <h1>Simple Text Editor</h1>
+  <div class="columns mt-3">
+    <div class="column is-one-fifth">
+      <p>stuff</p>
+    </div>
+    <div class="column is-four-fifths">
+      <div id="codemirror-container"></div>
+    </div>
+  </div>
   <script src="app.js" type="module"></script>
 </body>
 

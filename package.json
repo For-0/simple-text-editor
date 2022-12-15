@@ -3,10 +3,14 @@
     "@parcel/packager-raw-url": "^2.8.1",
     "@parcel/transformer-sass": "^2.8.1",
     "@parcel/transformer-webmanifest": "^2.8.1",
-    "parcel": "^2.8.1"
+    "parcel": "^2.8.1",
+    "patch-package": "^6.5.0",
+    "process": "^0.11.10"
   },
   "dependencies": {
-    "bulma": "^0.9.4"
+    "@codemirror/lang-javascript": "^6.1.2",
+    "bulma": "^0.9.4",
+    "codemirror": "^6.0.1"
   },
   "name": "simple-text-editor",
   "description": "That's all it is",
@@ -15,7 +19,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build --no-source-maps",
-    "start": "parcel"
+    "start": "parcel",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
