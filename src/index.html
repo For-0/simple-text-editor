@@ -2,79 +2,100 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Text Editor</title>
-  <link rel="icon" href="icons/favicon.ico" sizes="any" />
-  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
-  <link rel="manifest" href="app.webmanifest" crossorigin="use-credentials" />
-  <link rel="stylesheet" href="app.scss" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Text Editor</title>
+    <link rel="icon" href="icons/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="manifest" href="app.webmanifest" crossorigin="use-credentials" />
+    <link rel="stylesheet" href="app.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body class="is-flex is-flex-direction-column">
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="icons/icon-192.png" width="28" height="28" alt="Simple Text Editor" />
-      </a>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="main-navbar" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="#">
-          Simple Text Editor
-        </a>
-      </div>
-
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-light">
-              <span class="icon">
-                <i class="material-symbols-rounded">add</i>
-              </span>
-              <span>Create</span>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="icons/icon-192.png" width="28" height="28" alt="Simple Text Editor" />
             </a>
-            <a class="button is-primary">Options</a>
-          </div>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-      </div>
-    </div>
-  </nav>
-  <div class="columns mt-3 is-flex-grow-1">
-    <div class="column is-one-fifth">
-      <p>stuff</p>
-    </div>
-    <div class="column is-four-fifths">
-      <div class="is-flex is-flex-direction-column" style="height: 100%;">
-        <div id="codemirror-container" class="is-flex-grow-1"></div>
-        <div class="is-flex-shrink-1 is-flex flex-direction-row">
-          <div class="select">
-            <select title="Choose a language" id="select-choose-language">
-              <option value="0">Plain Text</option>
-              <option value="1">HTML</option>
-              <option value="2">CSS</option>
-              <option value="3">JavaScript</option>
-              <option value="4">Python</option>
-            </select>
-          </div>
+
+        <div id="main-navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#">
+                    Simple Text Editor
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light">
+                            <span class="icon">
+                                <i class="material-symbols-rounded">add</i>
+                            </span>
+                            <span>Create</span>
+                        </a>
+                        <a class="button is-primary">Options</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
+    <div class="columns mt-3 is-flex-grow-1 m-0">
+        <div class="column is-one-fifth">
+            <div class="panel is-flex is-flex-direction-column">
+                <p class="panel-heading">Files</p>
+                <div class="panel-block">
+                    <p class="control has-icons-left">
+                        <input class="input" type="text" placeholder="Search" id="input-filter-search" />
+                        <span class="icon is-left">
+                            <i class="material-symbols-rounded" aria-hidden="true">search</i>
+                        </span>
+                    </p>
+                </div>
+                <p class="panel-tabs">
+                    <a class="is-active">All</a>
+                    <a>HTML</a>
+                    <a>CSS</a>
+                    <a>JS</a>
+                    <a>Python</a>
+                </p>
+                <div id="panel-files-list" class="is-flex-grow-1"></div>
+                <div class="panel-block">
+                    <button class="button is-success is-outlined is-fullwidth" type="button">Create New File</button>
+                </div>
+            </div>
+        </div>
+        <div class="column is-four-fifths">
+            <div class="is-flex is-flex-direction-column" style="height: 100%;">
+                <div id="codemirror-container" class="is-flex-grow-1"></div>
+                <div class="is-flex-shrink-1 is-flex flex-direction-row">
+                    <div class="select is-primary">
+                        <select title="Choose a language" id="select-choose-language">
+                            <option value="text/plain">Plain Text</option>
+                            <option value="text/html">HTML</option>
+                            <option value="text/css">CSS</option>
+                            <option value="application/javascript">JavaScript</option>
+                            <option value="text/x-python">Python</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="app.js" type="module"></script>
+    <script src="app.js" type="module"></script>
 </body>
 
 </html>

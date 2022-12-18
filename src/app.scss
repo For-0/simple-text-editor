@@ -7,7 +7,6 @@ $footer-color: #fff;
 $footer-padding: 1rem;
 $family-primary: Raleway, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
-// Note: Colors are the four browns in the VUS Logo. Goes from lightest to darkest.
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/base/_all.sass";
 @import "bulma/sass/elements/box.sass";
@@ -20,6 +19,7 @@ $family-primary: Raleway, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto
 @import "bulma/sass/components/dropdown.sass";
 @import "bulma/sass/components/level.sass";
 @import "bulma/sass/components/menu.sass";
+@import "bulma/sass/components/panel.sass";
 @import "bulma/sass/grid/_all.sass";
 @import "bulma/sass/helpers/_all.sass";
 @import "bulma/sass/form/_all.sass";
@@ -38,8 +38,25 @@ $family-primary: Raleway, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto
 }
 html, body {
     height: 100%;
+    overflow: auto;
 }
 
 .cm-editor.cm-focused {
     outline: none !important;
+}
+body > .columns {
+    max-width: 100%;
+    overflow: auto;
+}
+#input-filter-search + .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.panel {
+    height: 100%;
+}
+#panel-files-list {
+    overflow-y: auto;
 }
