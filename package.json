@@ -1,14 +1,17 @@
 {
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.8.1",
-    "@parcel/transformer-sass": "^2.8.1",
-    "@parcel/transformer-webmanifest": "^2.8.1",
-    "parcel": "^2.8.1",
+    "@parcel/packager-raw-url": "^2.8.2",
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2",
+    "@parcel/transformer-webmanifest": "^2.8.2",
     "patch-package": "^6.5.0",
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@codemirror/lang-css": "^6.0.1",
+    "@codemirror/lang-html": "^6.4.0",
     "@codemirror/lang-javascript": "^6.1.2",
+    "@codemirror/lang-python": "^6.1.0",
     "bulma": "^0.9.4",
     "codemirror": "^6.0.1"
   },

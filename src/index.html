@@ -17,11 +17,11 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
-<body>
+<body class="is-flex is-flex-direction-column">
   <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="icons/icon-192.png" width="28" height="28">
+      <a class="navbar-item" href="/">
+        <img src="icons/icon-192.png" width="28" height="28" alt="Simple Text Editor" />
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
@@ -53,12 +53,25 @@
       </div>
     </div>
   </nav>
-  <div class="columns mt-3">
+  <div class="columns mt-3 is-flex-grow-1">
     <div class="column is-one-fifth">
       <p>stuff</p>
     </div>
     <div class="column is-four-fifths">
-      <div id="codemirror-container"></div>
+      <div class="is-flex is-flex-direction-column" style="height: 100%;">
+        <div id="codemirror-container" class="is-flex-grow-1"></div>
+        <div class="is-flex-shrink-1 is-flex flex-direction-row">
+          <div class="select">
+            <select title="Choose a language" id="select-choose-language">
+              <option value="0">Plain Text</option>
+              <option value="1">HTML</option>
+              <option value="2">CSS</option>
+              <option value="3">JavaScript</option>
+              <option value="4">Python</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="app.js" type="module"></script>

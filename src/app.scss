@@ -5,7 +5,7 @@ $primary: #009688;
 $footer-background-color: $primary;
 $footer-color: #fff;
 $footer-padding: 1rem;
-$family-primary: "Raleway";
+$family-primary: Raleway, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
 // Note: Colors are the four browns in the VUS Logo. Goes from lightest to darkest.
 @import "bulma/sass/utilities/_all.sass";
@@ -35,4 +35,11 @@ $family-primary: "Raleway";
 .button .material-symbols-rounded {
     vertical-align: middle;
     font-size: 1rem;
+}
+html, body {
+    height: 100%;
+}
+
+.cm-editor.cm-focused {
+    outline: none !important;
 }
