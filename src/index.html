@@ -74,22 +74,47 @@
                 </p>
                 <div id="panel-files-list" class="is-flex-grow-1"></div>
                 <div class="panel-block">
-                    <button class="button is-success is-outlined is-fullwidth" type="button">Create New File</button>
+                    <button class="button is-success is-outlined is-fullwidth" type="button" id="btn-create-new">Create New File</button>
                 </div>
             </div>
         </div>
         <div class="column is-four-fifths">
             <div class="is-flex is-flex-direction-column" style="height: 100%;">
                 <div id="codemirror-container" class="is-flex-grow-1"></div>
-                <div class="is-flex-shrink-1 is-flex flex-direction-row">
-                    <div class="select is-primary">
-                        <select title="Choose a language" id="select-choose-language">
-                            <option value="text/plain">Plain Text</option>
-                            <option value="text/html">HTML</option>
-                            <option value="text/css">CSS</option>
-                            <option value="application/javascript">JavaScript</option>
-                            <option value="text/x-python">Python</option>
-                        </select>
+                <div class="is-flex-shrink-1 level">
+                    <div class="level-left">
+                        <div class="select is-primary level-item">
+                            <select title="Choose a language" id="select-choose-language">
+                                <option value="text/plain">Plain Text</option>
+                                <option value="text/html">HTML</option>
+                                <option value="text/css">CSS</option>
+                                <option value="application/javascript">JavaScript</option>
+                                <option value="text/x-python">Python</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <div class="field has-addons" id="input-filename">
+                                <p class="control has-icons-left">
+                                    <input class="input" type="text" placeholder="Filename" required />
+                                    <span class="icon is-left">
+                                        <i class="material-symbols-rounded">short_text</i>
+                                    </span>
+                                </p>
+                                <p class="control">
+                                    <a class="button is-static">.txt</a>
+                                </p>
+                                <p class="control">
+                                    <button type="button" class="button is-primary" id="btn-save-file">
+                                        <span>Save</span>
+                                        <span class="icon">
+                                            <i class="material-symbols-rounded">save</i>
+                                        </span>
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

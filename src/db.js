@@ -47,7 +47,13 @@ export default class FileMetadata {
     static async getAll() {
         const db = await this.getDB();
         const files = await db.getAll("files_meta");
-        return files.map(file => new FileMetadata(file));
+        return files.map(file => new this(file));
+    }
+
+    static async get(filename) {
+        const db = await this.getDB();
+        const file = await db.get("files_meta", filename);
+        return file ? new this(file) : null;
     }
     /**
      * Get the contents of this file from the files object store
@@ -82,5 +88,9 @@ export default class FileMetadata {
     async save() {
         const db = await FileMetadata.getDB();
         await db.put("files_meta", {name: this.name, mimeType: this.mimeType, lastModified: this.lastModified, created: this.created});
+    }
+
+    get filenameBase64() {
+        return Buffer.from(this.name, 'utf8').toString('base64');
     }
 }

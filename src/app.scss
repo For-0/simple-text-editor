@@ -13,6 +13,7 @@ $family-primary: Raleway, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto
 @import "bulma/sass/elements/button.sass";
 @import "bulma/sass/elements/content.sass";
 @import "bulma/sass/elements/title.sass";
+@import "bulma/sass/elements/icon.sass";
 @import "bulma/sass/elements/other.sass";
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/components/modal.sass";
@@ -59,4 +60,7 @@ body > .columns {
 }
 #panel-files-list {
     overflow-y: auto;
+    a.panel-block:not(.is-active) .panel-icon img {
+        filter: grayscale(1);
+    }
 }
