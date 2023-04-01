@@ -10,10 +10,10 @@ That's all it is - a text editor for the web for those devices which don't have 
 Do you think I have enough money to buy another domain?
 
 ## Features
- - [ ] Create, edit, and view multiple text files with names
- - [ ] Syntax highlighting for various languages
+ - [x] Create, edit, and view multiple text files with names
+ - [x] Syntax highlighting for various languages
  - [ ] Open files from the OS file manager and save files to it
- - [ ] Line/column count
+ - [x] Line/column count
  - [ ] Sharing (maybe??)
 
 ## Isn't this one of many text editors?
