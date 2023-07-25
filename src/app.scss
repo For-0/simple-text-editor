@@ -28,7 +28,10 @@ html, body {
     height: 100%;
     overflow: auto;
 }
-
+#codemirror-container {
+    min-height: 0;
+    overflow-y: scroll;
+}
 .cm-editor.cm-focused {
     outline: none !important;
 }
