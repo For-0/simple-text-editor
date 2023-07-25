@@ -10,11 +10,6 @@
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
     <link rel="manifest" href="app.webmanifest" crossorigin="use-credentials" />
     <link rel="stylesheet" href="app.scss" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body class="is-flex is-flex-direction-column">
@@ -37,17 +32,25 @@
                     Simple Text Editor
                 </a>
             </div>
-
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-light">
+                        <button class="button is-outlined is-light" id="btn-create-new">
                             <span class="icon">
-                                <i class="material-symbols-rounded">add</i>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>                                  
                             </span>
                             <span>Create</span>
-                        </a>
-                        <a class="button is-primary">Options</a>
+                        </button>
+                        <button class="button is-inverted is-light" id="btn-open-filesystem">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
+                                </svg>                                  
+                            </span>
+                            <span>Open</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -61,21 +64,13 @@
                     <p class="control has-icons-left">
                         <input class="input" type="text" placeholder="Search" id="input-filter-search" />
                         <span class="icon is-left">
-                            <i class="material-symbols-rounded" aria-hidden="true">search</i>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>                              
                         </span>
                     </p>
                 </div>
-                <p class="panel-tabs">
-                    <a class="is-active">All</a>
-                    <a>HTML</a>
-                    <a>CSS</a>
-                    <a>JS</a>
-                    <a>Python</a>
-                </p>
                 <div id="panel-files-list" class="is-flex-grow-1"></div>
-                <div class="panel-block">
-                    <button class="button is-success is-outlined is-fullwidth" type="button" id="btn-create-new">Create New File</button>
-                </div>
             </div>
         </div>
         <div class="column is-four-fifths">
@@ -99,7 +94,9 @@
                                 <p class="control has-icons-left">
                                     <input class="input" type="text" placeholder="Filename" required />
                                     <span class="icon is-left">
-                                        <i class="material-symbols-rounded">short_text</i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                                        </svg>                                          
                                     </span>
                                 </p>
                                 <p class="control">
@@ -109,7 +106,14 @@
                                     <button type="button" class="button is-primary" id="btn-save-file">
                                         <span>Save</span>
                                         <span class="icon">
-                                            <i class="material-symbols-rounded">save</i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                            </svg>                                              
+                                        </span>
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                            </svg>                                                                                         
                                         </span>
                                     </button>
                                 </p>
@@ -120,7 +124,7 @@
             </div>
         </div>
     </div>
-    <script src="app.js" type="module"></script>
+    <script src="app.ts" type="module"></script>
 </body>
 
 </html>

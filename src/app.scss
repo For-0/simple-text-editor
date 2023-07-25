@@ -5,7 +5,6 @@ $primary: #009688;
 $footer-background-color: $primary;
 $footer-color: #fff;
 $footer-padding: 1rem;
-$family-primary: Raleway, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/base/_all.sass";
@@ -16,7 +15,6 @@ $family-primary: Raleway, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto
 @import "bulma/sass/elements/icon.sass";
 @import "bulma/sass/elements/other.sass";
 @import "bulma/sass/components/navbar.sass";
-@import "bulma/sass/components/modal.sass";
 @import "bulma/sass/components/dropdown.sass";
 @import "bulma/sass/components/level.sass";
 @import "bulma/sass/components/menu.sass";
@@ -26,17 +24,6 @@ $family-primary: Raleway, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto
 @import "bulma/sass/form/_all.sass";
 @import "bulma/sass/layout/_all.sass";
 
-.material-symbols-rounded {
-    font-variation-settings:
-        'FILL' 1,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48;
-}
-.button .material-symbols-rounded {
-    vertical-align: middle;
-    font-size: 1rem;
-}
 html, body {
     height: 100%;
     overflow: auto;
@@ -63,4 +50,28 @@ body > .columns {
     a.panel-block:not(.is-active) .panel-icon img {
         filter: grayscale(1);
     }
+}
+
+#btn-save-file .icon:nth-child(2):not([hidden]) + .icon:last-child {
+    display: none;
+}
+
+#btn-save-file .icon:nth-child(2) {
+    margin-left: 0.25em;
+    margin-right: calc(-0.5em - 1px);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+#btn-open-filesystem {
+    background-color: transparent;
+}
+#btn-open-filesystem:hover {
+    background-color: #fff3;
+}
+
+.button {
+  transition: all 0.1s ease-in-out;
 }

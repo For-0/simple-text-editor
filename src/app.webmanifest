@@ -38,11 +38,13 @@
     ],
     "file_handlers": [
         {
-            "action": "/open-file",
+            "action": "/",
             "accept": {
-                "text/plain": [
-                    ".txt"
-                ]
+                "text/plain": [".txt"],
+                "application/javascript": [".js", ".cjs", ".mjs"],
+                "text/html": [".html", ".htm"],
+                "text/css": [".css"],
+                "text/x-python": [".py"]
             },
             "icons": [
                 {
@@ -53,5 +55,8 @@
             ],
             "launch_type": "single-client"
         }
-    ]
+    ],
+    "launch_handler": {
+        "client_mode": "focus-existing"
+    }
 }
