@@ -24,6 +24,13 @@ $footer-padding: 1rem;
 @import "bulma/sass/form/_all.sass";
 @import "bulma/sass/layout/_all.sass";
 
+html > body > [data-gg-privacy-banner-anchor] {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden !important;
+}
+
 html, body {
     height: 100%;
     overflow: auto;
